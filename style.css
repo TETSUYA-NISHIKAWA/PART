@@ -1416,6 +1416,7 @@ img {
 	display: block;
 	letter-spacing: 0.09em;
 	font-weight: bold;
+  font-size: 1rem;
 }
 
 /*========= ボタンのためのCSS ===============*/
@@ -1686,7 +1687,11 @@ img {
   /* product */
 
   .product {
-  padding: 64px 0 160px 0;
+  padding: 64px 0 128px 0;
+  }
+
+  .product-name span {
+    font-size: 0.707rem;
   }
 
   .slick-prev {
