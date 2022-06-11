@@ -155,7 +155,7 @@ if (matchMedia('only screen and (max-width: 599px)').matches) {
 	$('.slider').slick({
 		autoplay: true,//自動的に動き出すか。初期値はfalse。
 		infinite: true,//スライドをループさせるかどうか。初期値はtrue。
-		speed: 550,//スライドのスピード。初期値は300。
+		speed: 800,//スライドのスピード。初期値は300。
 		slidesToShow: 1,//スライドを画面に1枚見せる
 		slidesToScroll: 1,//1回のスクロールで1枚の写真を移動して見せる
 		prevArrow: '<div class="slick-prev"></div>',//矢印部分PreviewのHTMLを変更	
