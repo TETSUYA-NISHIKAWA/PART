@@ -1370,13 +1370,295 @@ img {
 }
 
 
+/*media Queries 1024
+------------------------------------------------------------------*/
 
+@media screen and (max-width: 1024px) {
+
+  .pc-only {
+    display: none;
+  }
+
+  .tb-only {
+    display: block;
+  }
+
+  .sp-only {
+    display: none;
+  }
+
+  /*-------------------------
+    ハンバーガーメニュー
+  -------------------------*/
+
+  /* ナビゲーションのためのCSS */
+
+  #g-nav {
+    /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+    position: fixed;
+    z-index: 999;
+    /*ナビのスタート位置と形状*/
+    top: 0;
+    right: -120%;
+    width: 100%;
+    height: 100vh;
+    /*ナビの高さ*/
+    background: #749FAE;
+    /*動き*/
+    transition: all 0.6s;
+  }
+
+  /*アクティブクラスがついたら位置を0に*/
+  #g-nav.panelactive {
+    right: 0;
+  }
+
+  /*ナビゲーションの縦スクロール*/
+  #g-nav.panelactive #g-nav-list {
+    /*ナビの数が増えた場合縦スクロール*/
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100vh;
+    /*表示する高さ*/
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /*ナビゲーション*/
+  #g-nav ul {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 10%;
+    left: 48px;
+  }
+
+  /*リストのlayout設定*/
+  #g-nav li {
+    list-style: none;
+    text-align: left;
+  }
+
+  #g-nav li a {
+    color: #222;
+    text-decoration: none;
+    padding: 18px 0;
+    display: block;
+    letter-spacing: 0.09em;
+    font-weight: 300;
+    font-size: 1.999rem;
+  }
+
+  /*ナビゲーション SNS*/
+  #g-nav .sns-list {
+    /*ナビゲーション天地中央揃え*/
+    position: absolute;
+    z-index: 999;
+    top: 70%;
+    left: 48px;
+    margin-bottom: 0;
+    line-height: 1.2;
+  }
+
+  #g-nav .sns-item:not(:last-of-type) {
+    margin-right: 40px;
+  }
+
+  .header .sns-item img {
+    width: 30px;
+  }
+
+
+  /* ボタンのためのCSS */
+
+  .openbtn {
+    position: fixed;
+    z-index: 9999;
+    /*ボタンを最前面に*/
+    top: 10px;
+    right: 35px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+  }
+
+  /*×に変化*/
+  .openbtn span {
+    display: inline-block;
+    transition: all .3s;
+    position: absolute;
+    left: 14px;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    width: 45%;
+  }
+
+  .openbtn span:nth-of-type(1) {
+    top: 10px;
+  }
+
+  .openbtn span:nth-of-type(2) {
+    top: 20px;
+  }
+
+  .openbtn span:nth-of-type(3) {
+    top: 30px;
+  }
+
+  .openbtn.active span:nth-of-type(1) {
+    top: 18px;
+    left: 18px;
+    transform: translateY(6px) rotate(-45deg);
+    width: 30%;
+  }
+
+  .openbtn.active span:nth-of-type(2) {
+    opacity: 0;
+  }
+
+  .openbtn.active span:nth-of-type(3) {
+    top: 30px;
+    left: 18px;
+    transform: translateY(-6px) rotate(45deg);
+    width: 30%;
+  }
+
+  /*-------------------------
+  レイアウト lay2
+  -------------------------*/
+
+  .about,
+  .lookbook {
+    height: 80vh;
+  }
+
+
+  .newarrivals,
+  .product {
+    height: 40vh;
+  }
+
+  .latestnews {
+    height: 65vh;
+  }
+
+  .link {
+    padding: 0;
+  }
+
+  .container {
+    margin: 0 auto;
+    max-width: 768px;
+    padding: 0 48px;
+  }
+
+  .header .container {
+    padding: 16px 48px;
+  }
+
+  /*-------------------------
+    見出し ttl2
+  -------------------------*/
+  .title,
+  .link-name {
+    font-size: 1.999rem;
+  }
+
+  /*-------------------------
+    ヘッダー hea2
+  -------------------------*/
+
+  #g-nav {
+    display: inline;
+  }
+
+  .gnav-list {
+    display: none;
+  }
+
+  .menu-list {
+    padding-right: 48px;
+  }
+
+  .menu-item:nth-of-type(2) {
+    display: none;
+  }
+
+  .header.scroll-nav {
+    background: #fff;
+  }
+
+  /*-------------------------
+    メインビジュアル
+  -------------------------*/
+
+  .scrolldown1 {
+    right: 65px;
+  }
+
+  /*-------------------------
+    About SEC1-2
+  -------------------------*/
+
+  .about-phrase,
+  .lookbook-phrase {
+    font-size: 2.827rem;
+  }
+
+  .about-photo {
+    width: 52%;
+    height: 70vh;
+  }
+
+  .about-catchcopy {
+    height: 360px;
+  }
+
+  /*-------------------------
+    Product SEC3-2
+  -------------------------*/
+
+  .slick-prev {
+    left: 0;
+    top: 95%;
+  }
+
+  .slick-next {
+    right: 0;
+    top: 95%;
+  }
+
+  /* lookbook */
+
+  .lookbook-photo {
+    width: 52%;
+    height: 70vh;
+  }
+
+  .lookbook-catchcopy {
+    right: 48px;
+    height: 340px;
+  }
+
+  /*-------------------------
+    Latestnews SEC5-2
+  -------------------------*/
+
+  .latestnews-info {
+    margin-left: 64px;
+  }
+
+
+
+}
 
 
 /*media Queries 599
 ------------------------------------------------------------------*/
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 599px) {
 
   body {
     font-size: 13px;
