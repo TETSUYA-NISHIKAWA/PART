@@ -21,14 +21,16 @@
 
 html {
   scroll-behavior: smooth;
+  font-size: 15px;
 }
 
 body {
   font-family: 'Lato', "Arial", "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
-  color: #333333;
+  color: #222;
   background-color: #fff;
   text-align: center;
-  letter-spacing: .05em;
+  letter-spacing: .08em;
+  line-height: 1.7;
 }
 
 /*
@@ -57,7 +59,7 @@ body::before {
 a {
   transition: 0.3s;
   text-decoration: none;
-  color: #333333;
+  color: #222;
 }
 
 img {
@@ -87,10 +89,6 @@ img {
   display: none;
 }
 
-.newarrivals img {
-  margin-bottom: 8px;
-}
-
 .fadeInUpTrigger, .fadeInTrigger {
   opacity: 0;
 }
@@ -111,6 +109,32 @@ img {
 }
 
 /*---------------------------------------------------
+  背景カラー　col1
+---------------------------------------------------*/
+
+.about {
+  background-color: #7c98ab;
+  position: relative;
+}
+
+.product {
+  background-color: #e9edf1;
+}
+
+.lookbook {
+  position: relative;
+  background: linear-gradient(to bottom, #e9edf1 0%, #e9edf1 25%, #bdcad4 25%, #bdcad4 100%);
+}
+
+.latestnews {
+  background-color: #bdcad4;
+}
+
+.link {
+  background-color: #bdcad4;
+}
+
+/*---------------------------------------------------
   レイアウト　lay1
 ---------------------------------------------------*/
 
@@ -122,6 +146,12 @@ img {
 .section {
   padding: 96px 0;
   /*background-color: peachpuff;*/
+}
+
+.newarrivals,
+.product,
+.latestnews {
+  height: 85vh;
 }
 
 .newarrivals,
@@ -138,41 +168,15 @@ img {
   justify-content: center;
 }
 
-.latestnews .container,
-.footer .container {
-  flex-basis: 100%;
-}
-
-/* 実証用 ----------------*/
-
-.about,
-.lookbook {
-  height: 95vh;
-  /*min-height: 700px;
-  max-height: 1080px;*/
-}
-
-.newarrivals,
-.product,
-.latestnews {
-  height: 85vh;
-  /*min-height: 680px;
-  max-height: 1080px;*/
-}
-
-.link-item img {
-  width: 100%;
-  height: 60vh;
-  object-fit: cover;
+.link {
+  padding: 0;
 }
 
 .footer {
   height: 30vh;
 }
 
-/* 実証用 ----------------*/
-
-/* コンテナ */
+/* コンテナ ----------------*/
 
 .container {
   margin: 0 auto;
@@ -185,8 +189,7 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 48px;
-  line-height: 1.7;
+  padding: 24px 48px;
   max-width: none;
   min-height: auto;
 }
@@ -196,41 +199,114 @@ img {
   width: 100%;
 }
 
-.about .container {
-  z-index: 0;
+.latestnews .container,
+.footer .container {
+  flex-basis: 100%;
+}
+
+/*---------------------------------------------------
+    写真、見出し Pho1
+---------------------------------------------------*/
+
+.about,
+.lookbook {
+  height: 95vh;
+}
+
+.about .container,
+.lookbook .container {
+  z-index: 1;
   position: relative;
   /*background-color: tan;*/
   height: 100%;
+}
+
+.about-photo,
+.lookbook-photo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: absolute;
+  width: 55%;
+  height: 80vh;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.about-photo {
+  background-image: url(./img/about-img.jpg);
+  right: 0;
+  background-position: center;
+}
+
+.lookbook-photo {
+  background-image: url(./img/lookbook-img.jpg);
+  background-position: center top;
+}
+
+.about-catchcopy,
+.lookbook-catchcopy {
+  position: absolute;
+  z-index: 2;
+  text-align: left;
+  color: #fff;
+  height: auto;
+  padding-bottom: 24px;
   top: 50%;
   transform: translateY(-50%);
 }
 
-/* z-indexを1に */
-.lookbook .container {
-  z-index: 0;
-  position: relative;
-  /*background-color: tan;*/
-  height: 100%;
-  top: 50%;
-  transform: translateY(-50%);
+.lookbook-catchcopy {
+  right: 0;
+  color: #222;
+}
+
+.about-phrase,
+.lookbook-phrase {
+  font-size: 3.998rem;
+  font-weight: 300;
+  letter-spacing: .04em;
+  line-height: 1.3;
+}
+
+.about-title,
+.lookbook-title {
+  font-size: 1.999rem;
+  display: block;
+  margin-bottom: 48px;
+  letter-spacing: .04em;
+  font-feature-settings: "palt"
+}
+
+.about-txt {
+  line-height: 1.96;
+  margin-bottom: 48px;
+  letter-spacing: .05em;
 }
 
 /*---------------------------------------------------
   見出し　ttl1
 ---------------------------------------------------*/
 
-.title {
-  font-size: 2.827rem;
-  font-weight: 300;
-  line-height: 1;
-  /*margin-bottom: 48px;*/
+.mv-title {
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  line-height: 1.3;
+  pointer-events: none;
+  font-size: 5.653rem;
+  font-weight: 900;
+  color: #fff;
   letter-spacing: .05em;
-}
-
-.title span {
-  display: block;
-  margin-top: 8px;
-  font-size: 0.707rem;
 }
 
 .title-container {
@@ -239,6 +315,19 @@ img {
   margin-bottom: 48px;
 }
 
+.title {
+  font-size: 2.827rem;
+  font-weight: 300;
+  line-height: 1.4;
+  /*margin-bottom: 48px;*/
+  letter-spacing: .05em;
+}
+
+.title span {
+  display: block;
+  font-size: 0.707rem;
+  font-feature-settings: "palt"
+}
 
 /*---------------------------------------------------
   ボタン　botan1
@@ -254,16 +343,17 @@ img {
   display: inline-block;
   text-decoration: none;
   outline: none;
+  line-height: 1.2;
 }
 
 /* 英文 */
 .btnarrow4 span:first-of-type {
   position: relative;
   z-index: 3;
-  color: #333;
+  color: #222;
   font-size: 1.414rem;
   font-weight: 300;
-  letter-spacing: .09em;
+  letter-spacing: .05em;
 }
 
 /* 日本語 */
@@ -271,9 +361,9 @@ img {
   position: relative;
   top: 4px;
   z-index: 3;
-  color: #333;
+  color: #222;
   font-size: 0.707rem;
-  letter-spacing: .09em;
+  letter-spacing: .1em;
 }
 
 /*矢印と下線の形状*/
@@ -286,7 +376,7 @@ img {
   /*下線の形状*/
   width: 85%;
   height: 1px;
-  background: #333;
+  background: #222;
   /*アニメーションの指定*/
   transition: all .3s;
 }
@@ -300,7 +390,7 @@ img {
   /*矢印の形状*/
   width: 15px;
   height: 1px;
-  background: #333;
+  background: #222;
   transform: rotate(35deg);
   /*アニメーションの指定*/
   transition: all .3s;
@@ -351,14 +441,13 @@ img {
   position: relative;
   /*リンクの形状*/
   color: #72a0c1;
-  padding: 8px 8px;
+  padding: 4px 0;
   display: inline-block;
   text-decoration: none;
   outline: none;
   font-size: 0.707rem;
-  letter-spacing: .09em;
   font-weight: 600;
-  margin: 0 0 0 32px;
+  margin: 0 0 0 40px;
 }
 
 /*線の設定*/
@@ -425,13 +514,13 @@ img {
   /*はみ出す背景色を隠す*/
   overflow: hidden;
   width: 25%;
-  letter-spacing: .09em;
+  letter-spacing: .07em;
 }
 
 /*hoverした際のボタンの形状*/
 
 .btn04:hover {
-  color: #333;
+  color: #222;
   border-color: transparent;
   /*色の変化を遅らせる*/
   transition-delay: .6s;
@@ -593,10 +682,12 @@ img {
   width: 100%;
 }
 
-.header-logo {
-  width: 60px;
-  line-height: 1.2;
-  letter-spacing: .05em;
+.header a {
+  font-weight: 400;
+}
+
+.header img {
+  width: 50px;
 }
 
 .gnav-container {
@@ -606,6 +697,12 @@ img {
 
 /*------- navのlayout -------*/
 
+.gnav-item a {
+  font-weight: 400;
+  letter-spacing: .07em;
+  color: #fff;
+}
+
 .gnav-list {
   display: flex;
   justify-content: center;
@@ -613,19 +710,11 @@ img {
   position: absolute;
   left: 0;
   width: 100%;
+  line-height: 1.5;
 }
 
 .gnav-item:not(:last-of-type) {
-  margin-right: 32px;
-}
-
-.gnav-item a {
-  position: relative;
-  font-weight: 300;
-  display: inline-block;
-  transition: .3s;
-  letter-spacing: .05em;
-  color: #fff;
+  margin-right: 40px;
 }
 
 /*------- navのhoverアニメーション -------*/
@@ -634,11 +723,10 @@ img {
   /*線の基点とするためrelativeを指定*/
   position: relative;
   display: inline-block;
-  transition: .3s;
 }
 
 .gnav-item a:hover {
-  color: #333;
+  color: #222;
 }
 
 .gnav-item a::after {
@@ -650,7 +738,7 @@ img {
   /*線の形状*/
   width: 100%;
   height: 2px;
-  background: #333;
+  background: #222;
   /*アニメーションの指定*/
   transition: all .3s;
   transform: scale(0, 1);
@@ -683,7 +771,6 @@ img {
   position: relative;
   display: inline-block;
   transition: .3s;
-  letter-spacing: .05em;
   width: 24px;
 }
 
@@ -703,11 +790,10 @@ img {
   filter: brightness(0) invert(1);
 }
 
-/*
 .header.scroll-nav {
   background: #fff;
+  border-bottom: 1px solid #e5e5e5;
 }
-*/
 
 .header.scroll-nav .gnav-item a,
 .header.scroll-nav .white {
@@ -729,15 +815,6 @@ img {
 /*ハンバーガー*/
 .header.scroll-nav .openbtn span {
   background-color: #222;
-}
-
-.header {
-  transition: 0.3s;
-}
-
-.header a {
-  transition: 0.3s;
-  letter-spacing: .09em;
 }
 
 /*---------------------------------------------------
@@ -777,24 +854,6 @@ img {
   /*中央の画像のサイズだけ等倍に*/
   opacity: 1;
   /*透過なし*/
-}
-
-/*------- TOP画像の上のタイトル -------*/
-
-.mv-title {
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  text-align: center;
-  line-height: 1.3;
-  pointer-events: none;
-  font-size: 5.653rem;
-  font-weight: 900;
-  color: #fff;
-  letter-spacing: .05em;
 }
 
 /*------- スクロールダウン -------*/
@@ -864,71 +923,12 @@ img {
   About SEC1
 ---------------------------------------------------*/
 
-.about {
-  background-color: #7c98ab;
-  position: relative;
-}
 
-.about-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-image: url(./img/about-img.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  position: absolute;
-  right: 0;
-  width: 55%;
-  height: 80vh;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
 
-.about-catchcopy {
-  position: absolute;
-  z-index: 2;
-  text-align: left;
-  color: #fff;
-  height: 360px;
-  top: 50%;
-  transform: translateY(-50%);
-}
 
-.about-phrase,
-.lookbook-phrase {
-  font-size: 3.998rem;
-  font-weight: 300;
-  letter-spacing: .05em;
-}
 
-.about-title,
-.lookbook-title {
-  font-size: 1.999rem;
-  display: block;
-  margin-bottom: 48px;
-  letter-spacing: .05em;
-}
 
-.lookbook-title {
-  font-weight: 400;
-  margin-bottom: 48px;
-}
 
-/*
-.about-title .color {
-  color: #749FAE;
-}
-*/
-
-.about-txt {
-  line-height: 1.96;
-  margin-bottom: 48px;
-  letter-spacing: .05em;
-}
 
 /*---------------------------------------------------
   New arrivals SEC2
@@ -940,10 +940,6 @@ img {
   font-size: 87.5%;
 }
 
-.newarrivals-item {
-  line-height: 1.8;
-  letter-spacing: 0.05rem;
-}
 
 .newarrivals-item:not(:last-of-type) {
   margin-right: 16px;
@@ -953,17 +949,23 @@ img {
   opacity: .6;
 }
 
+.newarrivals img {
+  margin-bottom: 16px;
+}
+
+.newarrivals-name {
+  letter-spacing: .07em;
+  margin-bottom: 4px;
+}
+
 .newarrivals-price {
   font-weight: bold;
+  letter-spacing: .07em;
 }
 
 /*---------------------------------------------------
   Product SEC3
 ---------------------------------------------------*/
-
-.product {
-  background-color: #e9edf1;
-}
 
 .product-list {
   display: grid;
@@ -1003,7 +1005,6 @@ img {
 }
 
 /*-------　productのスライダー -------*/
-
 
 /*矢印の設定*/
 
@@ -1051,7 +1052,7 @@ img {
 .slick-dots {
   text-align: center;
   margin: 0 auto;
-  margin-top: 24px;
+  margin-top: 40px;
 }
 
 .slick-dots li {
@@ -1090,47 +1091,11 @@ img {
   LOOKBOOK SEC4
 ---------------------------------------------------*/
 
-.lookbook {
-  position: relative;
-  background: linear-gradient(to bottom, #e9edf1 0%, #e9edf1 25%, #bdcad4 25%, #bdcad4 100%);
-}
 
-.lookbook-photo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  background-image: url(./img/lookbook-img.jpg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center top;
-  position: absolute;
-  width: 55%;
-  height: 80vh;
-  z-index: 1;
-  top: 0;
-  bottom: 0;
-  margin: auto;
-}
-
-.lookbook-catchcopy {
-  position: absolute;
-  right: 0;
-  z-index: 2;
-  text-align: left;
-  height: 360px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: #333;
-}
 
 /*---------------------------------------------------
   Latest News SEC5
 ---------------------------------------------------*/
-
-.latestnews {
-  background-color: #bdcad4;
-}
 
 .latestnews-list {
   letter-spacing: .12em;
@@ -1153,15 +1118,18 @@ img {
   align-items: center;
 }
 
+.latestnews-item:hover {
+  background-color: #c8d3db;
+}
+
 .latestnews-time {
   /*color: #666;*/
   font-size: 1.414rem;
   font-weight: 300;
 }
 
-.latestnews-item:hover {
-
-  background-color: #c8d3db;
+.latestnews-category {
+  margin-left: 128px;
 }
 
 .latestnews-info {
@@ -1171,13 +1139,8 @@ img {
 }
 
 /*---------------------------------------------------
-  各種Link SEC6
+  各種Link　写真、見出し SEC6
 ---------------------------------------------------*/
-
-.link {
-  padding: 0;
-  background-color: #bdcad4;
-}
 
 .link-list {
   display: flex;
@@ -1185,9 +1148,30 @@ img {
   justify-content: center;
 }
 
+.link-item img {
+  width: 100%;
+  height: 60vh;
+  object-fit: cover;
+}
+
 .link-item {
   width: 33.33333%;
   position: relative;
+}
+
+/* 画像を暗くするオーバーレイ */
+
+.link-item::before {
+  content: '';
+  /* ↓暗いオーバーレイを半透明で配置 */
+  background-color: rgba(0, 0, 0, 0.2);
+  /* ↓全体を覆うように配置 */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
 }
 
 .link-catchcopy {
@@ -1225,21 +1209,6 @@ img {
   display: none;
 }
 
-/* 画像を暗くするオーバーレイ */
-
-.link-item::before {
-  content: '';
-  /* ↓暗いオーバーレイを半透明で配置 */
-  background-color: rgba(0, 0, 0, 0.2);
-  /* ↓全体を覆うように配置 */
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-}
-
 .link-btn {
   font-size: 0.707rem;
   margin: 0 auto;
@@ -1274,9 +1243,6 @@ img {
 ---------------------------------------------------*/
 
 .members {
-  /*padding: 960px 0 160px 0;*/
-  /*padding: 480px 0;*/
-  /*padding: 192px 0;*/
   display: none;
 }
 
@@ -1286,17 +1252,6 @@ img {
   align-items: center;
   color: #fff;
 }
-
-/*スキャン反影用*/
-/*
-.members {
-    background-image: url();
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    filter: grayscale(50%);
-    background-position: 50% 20%;
-}*/
 
 /*---------------------------------------------------
  フッター foo1
@@ -1320,8 +1275,6 @@ img {
 
 .footer-logo {
   width: 120px;
-  line-height: 1.2;
-  letter-spacing: .05em;
 }
 
 .footer-list {
@@ -1448,6 +1401,7 @@ img {
     letter-spacing: 0.09em;
     font-weight: 300;
     font-size: 1.999rem;
+    line-height: 1.2;
   }
 
   /*ナビゲーション SNS*/
@@ -1455,7 +1409,7 @@ img {
     /*ナビゲーション天地中央揃え*/
     position: absolute;
     z-index: 999;
-    top: 70%;
+    top: 60%;
     left: 48px;
     margin-bottom: 0;
     line-height: 1.2;
@@ -1469,7 +1423,6 @@ img {
     width: 30px;
   }
 
-
   /* ボタンのためのCSS */
 
   .openbtn {
@@ -1477,7 +1430,7 @@ img {
     z-index: 9999;
     /*ボタンを最前面に*/
     top: 10px;
-    right: 35px;
+    right: 10px;
     cursor: pointer;
     width: 50px;
     height: 50px;
@@ -1529,24 +1482,27 @@ img {
   レイアウト lay2
   -------------------------*/
 
-  .about,
-  .lookbook {
-    height: 80vh;
+  .section {
+    padding: 64px 0;
   }
-
 
   .newarrivals,
-  .product {
-    height: 40vh;
-  }
-
+  .product,
   .latestnews {
-    height: 65vh;
+    height: auto;
   }
 
   .link {
     padding: 0;
   }
+
+  .footer {
+    padding: 96px 0;
+    height: 95vh;
+    padding: 0;
+  }
+
+  /* コンテナ ----------------*/
 
   .container {
     margin: 0 auto;
@@ -1555,16 +1511,120 @@ img {
   }
 
   .header .container {
-    padding: 16px 48px;
+    padding: 16px 24px;
+  }
+
+  .newarrivals .container,
+  .product .container,
+  .latestnews .container,
+  .members .container {
+    position: relative;
+    padding-bottom: 64px;
+  }
+
+  .footer .container {
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+  }
+
+  /*------------------
+    写真、見出し Pho2
+  ------------------*/
+
+  .about,
+  .lookbook {
+    height: 1000px;
+  }
+
+  .about-photo,
+  .lookbook-photo {
+    width: 94%;
+    /*height: 600px;*/
+    height: 55%;
+    top: inherit;
+    bottom: inherit;
+    margin: inherit;
+  }
+
+  .about-catchcopy, .lookbook-catchcopy {
+    top: 100%;
+    left: 0;
+    width: 100%;
+    transform: translateY(-100%);
+    text-align: center;
+  }
+
+  .lookbook-catchcopy {
+    right: 48px;
+  }
+
+  .about-phrase,
+  .lookbook-phrase {
+    font-size: 2.827rem;
   }
 
   /*-------------------------
     見出し ttl2
   -------------------------*/
+
+  .mv-title {
+    font-size: 3.998rem;
+  }
+
+  .title-container {
+    margin-bottom: 0px;
+    justify-content: center;
+  }
+
   .title,
   .link-name {
     font-size: 1.999rem;
   }
+
+  .title {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .title span {
+    margin-top: 8px;
+  }
+
+  /*------------------
+    ボタン　botan2
+  ------------------*/
+
+  /* 矢印ボタン */
+
+  .btnlinestretches4 {
+    position: absolute;
+    top: 100%;
+    transform: translateY(-100%);
+    margin: 0;
+  }
+
+  /* 線の上を別の線が伸びるボタン */
+  .btn-container {
+    text-align: center;
+    margin-right: 0;
+  }
+
+  .latestnews .btn-container,
+  .members .btn-container {
+    text-align: center;
+  }
+
+  .btntransform {
+    margin: 20px 0 0 0;
+  }
+
+  .members .btntransform,
+  .members .btntransform {
+    margin: 0;
+  }
+
 
   /*-------------------------
     ヘッダー hea2
@@ -1595,25 +1655,37 @@ img {
   -------------------------*/
 
   .scrolldown1 {
-    right: 65px;
+    right: 50%;
   }
 
   /*-------------------------
     About SEC1-2
   -------------------------*/
 
-  .about-phrase,
-  .lookbook-phrase {
-    font-size: 2.827rem;
+
+  /*------------------
+    New arrivals SEC2-2
+  ------------------*/
+
+  .newarrivals-list {
+    flex-wrap: wrap;
   }
 
-  .about-photo {
-    width: 52%;
-    height: 70vh;
+  .newarrivals-item {
+    width: 47%;
+    margin-bottom: 40px;
   }
 
-  .about-catchcopy {
-    height: 360px;
+  .newarrivals-item:not(:last-of-type) {
+    margin-right: 0;
+  }
+
+  .newarrivals-item:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .newarrivals-item:nth-of-type(3) {
+    margin-bottom: 0;
   }
 
   /*-------------------------
@@ -1630,27 +1702,125 @@ img {
     top: 95%;
   }
 
-  /* lookbook */
+  /*-------------------------
+    lookbook SEC4-2
+  -------------------------*/
 
-  .lookbook-photo {
-    width: 52%;
-    height: 70vh;
-  }
 
-  .lookbook-catchcopy {
-    right: 48px;
-    height: 340px;
-  }
+
 
   /*-------------------------
     Latestnews SEC5-2
   -------------------------*/
 
-  .latestnews-info {
-    margin-left: 64px;
+  .latestnews-list-node {
+    padding: 24px 0;
   }
 
+  .latestnews-item {
+    display: grid;
+    padding: 0;
+  }
 
+  .latestnews-time {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .latestnews-category {
+    margin-left: 0;
+    margin-bottom: 4px;
+  }
+
+  .latestnews-info {
+    margin-left: 0;
+  }
+
+  /*------------------
+    各種Link　写真、見出し SEC6-2
+  ------------------*/
+
+  .link-item {
+    width: 100%;
+  }
+
+  .link-item img {
+    width: 100%;
+    height: 40vh;
+    object-fit: cover;
+  }
+
+  .btn04 {
+    padding: 16px;
+  }
+
+  /*------------------
+    Members SEC7-2
+  ------------------*/
+
+  /*
+  .members {
+    padding: 256px 0;
+  }
+
+  .members .container {
+    display: block;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .members .title {
+    margin: 0 0 40px 0;
+  }
+
+  .members a {
+    margin: 0;
+  }
+
+  .members .btntransform {
+    margin-bottom: 0;
+  }
+  */
+
+  /*------------------
+    フッター foo2
+  ------------------*/
+
+  .footer-logo {
+    margin: 0 auto;
+    margin-bottom: 64px;
+  }
+
+  .footer-list {
+    display: block;
+    text-align: center;
+  }
+
+  .footer-item {
+    padding-bottom: 48px;
+  }
+
+  .footer-item:not(:last-of-type) {
+    margin: 0;
+  }
+
+  .footer-nav-container {
+    display: block;
+    margin-bottom: 0;
+  }
+
+  .sns-list {
+    margin-bottom: 64px;
+  }
+
+  .sns-item:not(:last-of-type) {
+    margin-right: 32px;
+  }
+
+  #page-top {
+    right: 24px;
+    bottom: 24px;
+  }
 
 }
 
@@ -1680,17 +1850,11 @@ img {
     ハンバーガー 3
   ------------------*/
 
-  .openbtn {
-    top: 4.5px;
-    right: 10px;
-  }
-
   #g-nav ul {
     left: 24px;
   }
 
   #g-nav li a {
-    line-height: 1.2;
     font-size: 1rem;
   }
 
@@ -1700,6 +1864,10 @@ img {
 
   #g-nav .sns-item:not(:last-of-type) {
     margin-right: 32px;
+  }
+
+  .openbtn {
+    top: 4.5px;
   }
 
   .openbtn span:nth-of-type(1) {
@@ -1733,21 +1901,21 @@ img {
     height: 90vh;
   }
 
+  .link {
+    padding: 0;
+  }
+
   .footer {
     padding: 96px 0;
     height: 95vh;
     padding: 0;
   }
 
-  .footer .container {
-    height: auto;
-    top: 0;
-    bottom: 0;
-    margin: auto;
-  }
+  /* コンテナ ----------------*/
 
   .container {
     padding: 0 24px;
+    max-width: 375px;
   }
 
   .header .container {
@@ -1762,12 +1930,15 @@ img {
     padding-bottom: 64px;
   }
 
-  .link {
-    padding: 0;
+  .footer .container {
+    height: auto;
+    top: 0;
+    bottom: 0;
+    margin: auto;
   }
 
   /*------------------
-    写真 Pho3
+    写真、見出し Pho3
   ------------------*/
 
   .about-photo,
@@ -1777,30 +1948,6 @@ img {
     top: inherit;
     bottom: inherit;
     margin: inherit;
-  }
-
-  /*------------------
-    見出し ttl3
-  ------------------*/
-
-  .title-container {
-    margin-bottom: 0px;
-    justify-content: center;
-  }
-
-  .title {
-    text-align: center;
-    margin-bottom: 48px;
-  }
-
-  .title span {
-    margin-top: 8px;
-  }
-
-  .lead {
-    font-size: 14px;
-    line-height: 1.7;
-    margin-bottom: 16px;
   }
 
   .about-catchcopy,
@@ -1821,6 +1968,32 @@ img {
   .about-txt,
   .lookbook-txt {
     margin-bottom: 40px;
+  }
+
+  /*------------------
+    見出し ttl3
+  ------------------*/
+
+  .mv-title {
+    font-size: 2.827rem;
+  }
+
+  .title-container {
+    margin-bottom: 0px;
+    justify-content: center;
+  }
+
+  .title {
+    text-align: center;
+    margin-bottom: 48px;
+  }
+
+  .title span {
+    margin-top: 8px;
+  }
+
+  .product-name span {
+    font-size: 0.707rem;
   }
 
   /*------------------
@@ -1870,10 +2043,6 @@ img {
     メインビジュアル
   ------------------*/
 
-  .mv-title {
-    font-size: 2.827rem;
-  }
-
   .scrolldown1 {
     right: 50%;
   }
@@ -1912,10 +2081,6 @@ img {
   /*------------------
     Product SEC3-3
   ------------------*/
-
-  .product-name span {
-    font-size: 0.707rem;
-  }
 
   .slick-prev {
     left: 0;
@@ -1956,7 +2121,7 @@ img {
   }
 
   /*------------------
-    各種Link SEC6-3
+    各種Link 写真、見出し SEC6-3
   ------------------*/
 
   .link-item {
