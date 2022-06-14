@@ -6,7 +6,7 @@
 				// ヘッダーを変数の中に格納する
 				const header = document.querySelector("header");
 				// 728px以上スクロールしたらヘッダーに「scroll-nav」クラスをつける
-				header.classList.toggle("scroll-nav", window.scrollY >= 1560);
+				header.classList.toggle("scroll-nav", window.scrollY >= 1500);
 			  });
 
 	/* window.addEventListener("scroll", function () {
@@ -32,7 +32,7 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
 if (windowwidth > 1024){
 function PageTopAnime() {
 	var scroll = $(window).scrollTop();
-	if (scroll >= 5000){//上から720pxスクロールしたら
+	if (scroll >= 4500){//上から720pxスクロールしたら
 		$('#page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
 		$('#page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
 	}else{
@@ -153,7 +153,7 @@ $('#slider').vegas({
 
 if (matchMedia('only screen and (max-width: 599px)').matches) {
 	$('.slider').slick({
-		autoplay: false,//自動的に動き出すか。初期値はfalse。
+		autoplay: true,//自動的に動き出すか。初期値はfalse。
 		infinite: true,//スライドをループさせるかどうか。初期値はtrue。
 		speed: 800,//スライドのスピード。初期値は300。
 		slidesToShow: 1,//スライドを画面に1枚見せる
@@ -167,7 +167,7 @@ if (matchMedia('only screen and (max-width: 599px)').matches) {
 
 	} else if (matchMedia('only screen and (max-width: 1024px)').matches){
 		$('.slider').slick({
-			autoplay: false,//自動的に動き出すか。初期値はfalse。
+			autoplay: true,//自動的に動き出すか。初期値はfalse。
 			infinite: true,//スライドをループさせるかどうか。初期値はtrue。
 			speed: 800,//スライドのスピード。初期値は300。
 			slidesToShow: 2,//スライドを画面に3枚見せる
@@ -181,7 +181,7 @@ if (matchMedia('only screen and (max-width: 599px)').matches) {
 
 		} else {
 		$('.slider').slick({
-			autoplay: false,//自動的に動き出すか。初期値はfalse。
+			autoplay: true,//自動的に動き出すか。初期値はfalse。
 			infinite: true,//スライドをループさせるかどうか。初期値はtrue。
 			speed: 800,//スライドのスピード。初期値は300。
 			slidesToShow: 3,//スライドを画面に3枚見せる
