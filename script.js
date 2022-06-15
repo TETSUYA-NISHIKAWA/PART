@@ -27,55 +27,13 @@
 
 /*------------　ページトップリンク -ページの指定の高さを超えたら下から出現- ------------*/
 
-//スクロールした際の動きを関数でまとめる
-var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
-if (windowwidth > 1024){
-function PageTopAnime() {
-	var scroll = $(window).scrollTop();
-	if (scroll >= 4500){//上から720pxスクロールしたら
-		$('#page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
-		$('#page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
-	}else{
-		if($('#page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
-			$('#page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-			$('#page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
-		}
-	}
-}
-} else {
-function PageTopAnime() {
-	var scroll = $(window).scrollTop();
-	if (scroll >= 4800){//上から880pxスクロールしたら
-		$('#page-top').removeClass('DownMove');//#page-topについているDownMoveというクラス名を除く
-		$('#page-top').addClass('UpMove');//#page-topについているUpMoveというクラス名を付与
-	}else{
-		if($('#page-top').hasClass('UpMove')){//すでに#page-topにUpMoveというクラス名がついていたら
-			$('#page-top').removeClass('UpMove');//UpMoveというクラス名を除き
-			$('#page-top').addClass('DownMove');//DownMoveというクラス名を#page-topに付与
-		}
-	}
-}
-}
-
-// 画面をスクロールをしたら動かしたい場合の記述
-$(window).scroll(function () {
-	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-});
-
-// ページが読み込まれたらすぐに動かしたい場合の記述
-$(window).on('load', function () {
-	PageTopAnime();/* スクロールした際の動きの関数を呼ぶ*/
-});
-
 // #page-topをクリックした際の設定
-$('#page-top a').click(function () {
+$('#page-top').click(function () {
     $('body,html').animate({
         scrollTop: 0//ページトップまでスクロール
-    }, 100);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+    }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
     return false;//リンク自体の無効化
 });
-
-
 
 /*------------　  グローバルナビゲーション -クリックしたらナビが右から左に出現-  ------------*/
 
