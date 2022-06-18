@@ -1301,7 +1301,7 @@ img {
     display: block;
     letter-spacing: 0.09em;
     font-weight: 300;
-    font-size: 1.414rem;
+    font-size: 1.999rem;
     line-height: 1.2;
   }
 
@@ -1314,7 +1314,7 @@ img {
   #g-nav p {
     font-size: 0.707rem;
     letter-spacing: .1em;
-    margin-top: 64px;
+    margin-top: 96px;
   }
 
   #g-nav .sns-list {
@@ -1610,7 +1610,7 @@ img {
   /*---------------- ナビ ----------------*/
 
   #g-nav .g-nav-item a {
-    font-size: 1rem;
+    font-size: 1.414rem;
   }
 
   #g-nav .sns-item img {
