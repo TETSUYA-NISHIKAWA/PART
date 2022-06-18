@@ -1314,7 +1314,7 @@ img {
   #g-nav p {
     font-size: 0.707rem;
     letter-spacing: .1em;
-    margin-top: 96px;
+    margin-top: 64px;
   }
 
   #g-nav .sns-list {
@@ -1621,7 +1621,6 @@ img {
 
   #g-nav p {
     font-weight: 300;
-    margin-top: 64px;
   }
 
   /*---------------- ボタンのためのCSS ----------------*/
