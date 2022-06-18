@@ -1,3 +1,19 @@
+/*------------　アニメーション ------------*/
+	
+ //1つめの動き
+ $('.pulseTrigger').on('inview', function(event, isInView) {
+    if (isInView) {//表示領域に入った時
+      $(this).addClass('animate__animated animate__pulse');//クラス名が付与
+    }
+  });   
+
+ //2つめの動き
+$('.fadeInTrigger').on('inview', function(event, isInView) {
+    if (isInView) {//表示領域に入った時
+      $(this).addClass('animate__animated animate__fadeIn');//クラス名が付与
+    }
+  }); 
+
 /*------------　ヘッダーの色を白に変化 ------------*/
 
   var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0;
@@ -5,35 +21,18 @@
 			window.addEventListener("scroll", function () {
 				// ヘッダーを変数の中に格納する
 				const header = document.querySelector("header");
-				// 728px以上スクロールしたらヘッダーに「scroll-nav」クラスをつける
+				// 1500px以上スクロールしたらヘッダーに「scroll-nav」クラスをつける
 				header.classList.toggle("scroll-nav", window.scrollY >= 1500);
 			  });
-
-	/* window.addEventListener("scroll", function () {
-  // ヘッダーを変数の中に格納する
-  const header = document.querySelector("header");
-  // 100px以上スクロールしたらヘッダーに「scroll-nav-w」クラスをつける
-  header.classList.toggle("scroll-nav-w", window.scrollY > 6100);
-});*/
 
 		} else {
 			window.addEventListener("scroll", function () {
 				// ヘッダーを変数の中に格納する
 				const header = document.querySelector("header");
-				// 640px以上スクロールしたらヘッダーに「scroll-nav」クラスをつける
+				// 1px以上スクロールしたらヘッダーに「scroll-nav」クラスをつける
 				header.classList.toggle("scroll-nav", window.scrollY >= 1);
 			  });
 		}
-
-/*------------　ページトップリンク -ページの指定の高さを超えたら下から出現- ------------*/
-
-// #page-topをクリックした際の設定
-$('#page-top').click(function () {
-    $('body,html').animate({
-        scrollTop: 0//ページトップまでスクロール
-    }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
-    return false;//リンク自体の無効化
-});
 
 /*------------　  グローバルナビゲーション -クリックしたらナビが右から左に出現-  ------------*/
 
@@ -47,33 +46,6 @@ $("#g-nav a").click(function () {//ナビゲーションのリンクがクリッ
 	$("#g-nav").removeClass('panelactive');//ナビゲーションのpanelactiveクラスも除去
 });
 
-
-
-/*------------　アニメーション ------------*/
-	
-//1つめの動き
-$('.fadeInUpTrigger').on('inview', function(event, isInView) {
-    if (isInView) {//表示領域に入った時
-      $(this).addClass('animate__animated animate__fadeInUp');//クラス名が付与
-
-    }
-  });
-
- //2つめの動き
- $('.pulseTrigger').on('inview', function(event, isInView) {
-    if (isInView) {//表示領域に入った時
-      $(this).addClass('animate__animated animate__pulse');//クラス名が付与
-    }
-  });   
-
- //3つめの動き
-$('.fadeInTrigger').on('inview', function(event, isInView) {
-    if (isInView) {//表示領域に入った時
-      $(this).addClass('animate__animated animate__fadeIn');//クラス名が付与
-    }
-  }); 
-
-
 /*------------　MV画像のスクロール ------------*/
 
 //画像の設定
@@ -86,7 +58,7 @@ var windowwidth = window.innerWidth || document.documentElement.clientWidth || 0
                 { src: './img/mv3.jpg'},
 			];
 		} else {
-			var responsiveImage = [//タブレットサイズ（768px）以下用の画像
+			var responsiveImage = [//スマホサイズ（599px）以下用の画像
 				{ src: './img/spmv1.jpg'},
 				{ src: './img/spmv2.jpg'},
                 { src: './img/spmv3.jpg'},
@@ -107,7 +79,6 @@ $('#slider').vegas({
 	});
 
 /*------------　productのスライダー ------------*/
-
 
 if (matchMedia('only screen and (max-width: 599px)').matches) {
 	$('.slider').slick({
@@ -152,3 +123,13 @@ if (matchMedia('only screen and (max-width: 599px)').matches) {
 		});
 
 	}
+
+/*------------　ページトップリンク -ページの指定の高さを超えたら下から出現- ------------*/
+
+// #page-topをクリックした際の設定
+$('#page-top').click(function () {
+    $('body,html').animate({
+        scrollTop: 0//ページトップまでスクロール
+    }, 500);//ページトップスクロールの速さ。数字が大きいほど遅くなる
+    return false;//リンク自体の無効化
+});
