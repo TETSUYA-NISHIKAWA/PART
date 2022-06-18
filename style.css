@@ -1,19 +1,5 @@
 @charset "utf-8";
 
-/* 素材
-
-  height: 100%;
-  top: 50%;
-  transform: translateY(-50%);
-
-  top: 0;
-  bottom: 0;
-  margin: auto;
-
-  flex-basis: 100%;
-
-*/
-
 * {
   margin: 0;
   padding: 0;
@@ -32,25 +18,6 @@ body {
   letter-spacing: .08em;
   line-height: 1.7;
 }
-
-/*
-body::before {
-  background-image: url();
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-position: 50% 60%;
-  content: "";
-  filter: grayscale(85%);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
-}
-*/
-
 
 .txt {
   font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
@@ -91,21 +58,6 @@ img {
 
 .fadeInUpTrigger, .fadeInTrigger {
   opacity: 0;
-}
-
-.delay-time-01s {
-  animation-delay: 0.1s;
-  /*この数字を指定したい遅延時間に変更*/
-}
-
-.delay-time-02s {
-  animation-delay: 0.2s;
-  /*この数字を指定したい遅延時間に変更*/
-}
-
-.delay-time-03s {
-  animation-delay: 0.3s;
-  /*この数字を指定したい遅延時間に変更*/
 }
 
 /*---------------------------------------------------
@@ -178,7 +130,7 @@ img {
   position: relative;
 }
 
-/* コンテナ ----------------*/
+/*---------------- コンテナ ----------------*/
 
 .container {
   margin: 0 auto;
@@ -212,7 +164,7 @@ img {
 }
 
 /*---------------------------------------------------
-    写真、見出し Pho1
+    写真 Pho1
 ---------------------------------------------------*/
 
 .about,
@@ -256,46 +208,6 @@ img {
   background-position: center top;
 }
 
-.about-catchcopy,
-.lookbook-catchcopy {
-  position: absolute;
-  z-index: 2;
-  text-align: left;
-  color: #fff;
-  height: auto;
-  padding-bottom: 24px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-.lookbook-catchcopy {
-  right: 48px;
-  color: #222;
-}
-
-.about-phrase,
-.lookbook-phrase {
-  font-size: 3.998rem;
-  font-weight: 300;
-  letter-spacing: .04em;
-  line-height: 1.3;
-}
-
-.about-title,
-.lookbook-title {
-  font-size: 1.999rem;
-  display: block;
-  margin-bottom: 48px;
-  letter-spacing: .04em;
-  font-feature-settings: "palt"
-}
-
-.explanation {
-  line-height: 1.9;
-  margin-bottom: 48px;
-  letter-spacing: .05em;
-}
-
 /*---------------------------------------------------
   見出し　ttl1
 ---------------------------------------------------*/
@@ -336,11 +248,113 @@ img {
   font-feature-settings: "palt";
 }
 
+/*---------------- 写真見出し ----------------*/
+
+.about-catchcopy,
+.lookbook-catchcopy {
+  position: absolute;
+  z-index: 2;
+  text-align: left;
+  color: #fff;
+  height: auto;
+  padding-bottom: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.lookbook-catchcopy {
+  right: 48px;
+  color: #222;
+}
+
+.about-phrase,
+.lookbook-phrase {
+  font-size: 3.998rem;
+  font-weight: 300;
+  letter-spacing: .04em;
+  line-height: 1.3;
+}
+
+.about-title,
+.lookbook-title {
+  font-size: 1.999rem;
+  display: block;
+  margin-bottom: 48px;
+  letter-spacing: .04em;
+  font-feature-settings: "palt"
+}
+
+.explanation {
+  line-height: 1.9;
+  margin-bottom: 48px;
+  letter-spacing: .05em;
+}
+
+/*---------------- Link見出し ----------------*/
+
+.link-catchcopy {
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+}
+
+.link-name {
+  font-weight: 300;
+  font-size: 2.827rem;
+  margin-bottom: 48px;
+  line-height: 1.4;
+  letter-spacing: .05em;
+}
+
+.link-name span {
+  display: block;
+  font-size: 0.707rem;
+  letter-spacing: .1em;
+  font-feature-settings: "palt";
+  color: #fff;
+}
+
+.link-btn {
+  font-size: 0.707rem;
+  letter-spacing: .1em;
+  margin: 0 auto;
+  padding: 16px;
+  width: 40%;
+  color: #fff;
+  border: 1px solid #fff;
+  display: block;
+  position: relative;
+  pointer-events: auto;
+}
+
+.link-btn::after {
+  position: absolute;
+  content: '';
+  top: 1rem;
+  right: 15px;
+  width: 5px;
+  height: 5px;
+  border-top: 1px solid #fff;
+  border-right: 1px solid #fff;
+  transform: rotate(45deg);
+}
+
+.link-btn:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+  transition: .3s;
+}
+
 /*---------------------------------------------------
-  ボタン　botan1
+  ボタン　but1
 ---------------------------------------------------*/
 
-/*------- 矢印ボタン -------*/
+/*---------------- 矢印ボタン ----------------*/
 
 /* 全体 */
 .btnarrow4 {
@@ -413,15 +427,7 @@ img {
   right: -5%;
 }
 
-/*hover時の色*/
-/*
-.btnarrow4:hover::before,
-.btnarrow4:hover::after {
-  background-color: #72a0c1;
-}
-*/
-
-/*------- 矢印ボタン　ホワイト about -------*/
+/*---------------- 矢印ボタン（ホワイト） ----------------*/
 
 .about .btnarrow4::before,
 .about .btnarrow4::after {
@@ -433,15 +439,11 @@ img {
   color: #fff;
 }
 
-/*------- 線の上を別の線が伸びるボタン arrivals product news -------*/
+/*---------------- VIEWボタン ----------------*/
 
 .btn-container {
   text-align: right;
   margin-top: 24px;
-}
-
-.members .btn-container {
-  margin-top: 0;
 }
 
 .btnlinestretches4 {
@@ -492,28 +494,64 @@ img {
   color: #92643c;
 }
 
+/*---------------- newsボタン ----------------*/
 
-/*-- 線の上を別の線が伸びるボタン ホワイト members --*/
-
-.members .btnlinestretches4::before {
-  background: #fff;
+/*===ボタン共通設定 ===*/
+.btn {
+  /*アニメーションの起点とするためrelativeを指定*/
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  display: flex;
+  border-top: 1px solid #7a8288;
+  padding: 48px 10px;
+  align-items: center;
+  outline: none;
+  transition: ease .2s;
 }
 
-.members .btnlinestretches4 {
-  color: #fff;
-  margin: 0;
+.latestnews-list-node:last-of-type {
+  border-bottom: 1px solid #7a8288;
 }
 
-/*hover時に伸びる線の形状*/
-
-.members .btnlinestretches4::after {
-  background: #72a0c1;
+/*ボタン内spanの形状*/
+.btn span {
+  position: relative;
+  z-index: 3;
+  /*z-indexの数値をあげて文字を背景よりも手前に表示*/
+  display: flex;
+  align-items: center;
 }
 
-/*------- 線から塗りに変化するボタン link -------*/
+/*=== 背景が流れる（左から右） ===*/
+.bgleft:before {
+  content: '';
+  /*絶対配置で位置を指定*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  /*色や形状*/
+  background-color: #c8d3db;
+  /*背景色*/
+  width: 100%;
+  height: 100%;
+  /*アニメーション*/
+  transition: transform .6s cubic-bezier(0.9, 0.07, 0.45, 0.94) 0s;
+  background: 1s;
+  transform: scale(0, 1);
+  transform-origin: right top;
+}
+
+/*hoverした際の形状*/
+.bgleft:hover:before {
+  transform-origin: left top;
+  transform: scale(1, 1);
+}
+
+/*---------------- linkボタン ----------------*/
 
 /* ボタン共通設定 */
-
 .btn04 {
   /*線の基点とするためrelativeを指定*/
   position: relative;
@@ -531,7 +569,6 @@ img {
 }
 
 /*hoverした際のボタンの形状*/
-
 .btn04:hover {
   color: #222;
   border-color: transparent;
@@ -540,17 +577,15 @@ img {
 }
 
 /*線の設定*/
-
 .btn04 span {
   display: block;
   z-index: 2;
   line-height: 1.5;
 }
 
-/*== 線から塗に変化（左から右） */
+/*=== 線から塗に変化（左から右） ===*/
 
 /*線の設定*/
-
 .borderleft span::before, .borderleft span::after {
   content: '';
   /*絶対配置で線の位置を決める*/
@@ -564,27 +599,23 @@ img {
 }
 
 /*左上線*/
-
 .borderleft span::before {
   left: 0;
   top: 0;
 }
 
 /*左下線*/
-
 .borderleft span::after {
   left: 0;
   bottom: 0;
 }
 
 /*hoverをすると線が伸びる*/
-
 .borderleft:hover span::before, .borderleft:hover span::after {
   width: 100%;
 }
 
 /*背景の設定*/
-
 .borderleft::before {
   content: '';
   /*絶対配置で線の位置を決める*/
@@ -601,14 +632,13 @@ img {
 }
 
 /*hoverをすると背景が伸びる*/
-
 .borderleft:hover::before {
   width: 100%;
   /*0.4秒遅れてアニメーション*/
   transition-delay: .4s;
 }
 
-/*------- ページトップリンク -ページの指定の高さを超えたら下から出現- -------*/
+/*---------------- ページトップボタン ----------------*/
 
 /*リンクの形状*/
 #page-top a {
@@ -636,7 +666,6 @@ img {
 }
 
 /*リンクを右下に固定*/
-
 #page-top {
   position: absolute;
   top: 38px;
@@ -670,7 +699,7 @@ img {
   justify-content: space-between;
 }
 
-/*------- navのlayout -------*/
+/*---------------- navのレイアウト ----------------*/
 
 .gnav-item a {
   font-weight: 400;
@@ -692,7 +721,7 @@ img {
   margin-right: 40px;
 }
 
-/*------- navのhoverアニメーション -------*/
+/*---------------- navのhoverアニメーション ----------------*/
 
 .gnav-item a {
   /*線の基点とするためrelativeを指定*/
@@ -729,7 +758,7 @@ img {
   /*X方向にスケール拡大*/
 }
 
-/*------- menuのlayout -------*/
+/*---------------- menuのレイアウト ----------------*/
 
 .menu-list {
   display: flex;
@@ -749,7 +778,7 @@ img {
   width: 24px;
 }
 
-/*------- menuのhoverアニメーション -------*/
+/*---------------- menuのhoverアニメーション ----------------*/
 
 .menu-item a img:hover {
   transition: .3s;
@@ -759,7 +788,7 @@ img {
   opacity: 0.4;
 }
 
-/*------- スクロールして「scroll-navクラス」がついたときのheaderデザイン -------*/
+/*---------------- 「scroll-navクラス」がついたときのheaderデザイン ----------------*/
 
 .white {
   filter: brightness(0) invert(1);
@@ -799,7 +828,7 @@ img {
   メインビジュアル MV1
 ---------------------------------------------------*/
 
-/*------- スライダーアニメーションのTOP画像 -------*/
+/*---------------- スライダーアニメーションのTOP画像 ----------------*/
 
 #slider {
   width: 100%;
@@ -813,13 +842,6 @@ img {
   width: 100%;
   margin: 0 auto;
 }
-
-/*
-.slider img {
-  width:60vw;/*スライダー内の画像を60vwにしてレスポンシブ化*/
-
-/* height:auto;
-}*/
 
 .slider .slick-slide {
   transform: scale(0.99);
@@ -835,10 +857,9 @@ img {
   /*透過なし*/
 }
 
-/*------- スクロールダウン -------*/
+/*---------------- スクロールダウン ----------------*/
 
 /*スクロールダウン全体の場所*/
-
 .scrolldown1 {
   /*描画位置※位置は適宜調整してください*/
   position: absolute;
@@ -849,7 +870,6 @@ img {
 }
 
 /*Scrollテキストの描写*/
-
 .scrolldown1 span {
   /*描画位置*/
   position: absolute;
@@ -862,7 +882,6 @@ img {
 }
 
 /* 線の描写 */
-
 .scrolldown1::after {
   content: "";
   /*描画位置*/
@@ -878,7 +897,6 @@ img {
 }
 
 /*高さ・位置・透過が変化して線が上から下に動く*/
-
 @keyframes pathmove {
   0% {
     height: 0;
@@ -899,18 +917,7 @@ img {
 }
 
 /*---------------------------------------------------
-  About SEC1
----------------------------------------------------*/
-
-
-
-
-
-
-
-
-/*---------------------------------------------------
-  New arrivals SEC2
+  New arrivals new1
 ---------------------------------------------------*/
 
 .newarrivals-list {
@@ -943,7 +950,7 @@ img {
 }
 
 /*---------------------------------------------------
-  Product SEC3
+  Product plo1
 ---------------------------------------------------*/
 
 .product-list {
@@ -981,12 +988,9 @@ img {
   transition: .3s;
 }
 
-/*-------　productのスライダー -------*/
-
-/*矢印の設定*/
+/*---------------- productのスライダー ----------------*/
 
 /*戻る、次へ矢印の位置*/
-
 .slick-prev, .slick-next {
   position: absolute;
   top: 42%;
@@ -1024,7 +1028,7 @@ img {
   transition: .5s;
 }
 
-/*ドットナビゲーションの設定*/
+/*---------------- ドットナビゲーションの設定 ----------------*/
 
 .slick-dots {
   text-align: center;
@@ -1065,37 +1069,13 @@ img {
 }
 
 /*---------------------------------------------------
-  LOOKBOOK SEC4
----------------------------------------------------*/
-
-
-
-/*---------------------------------------------------
-  Latest News SEC5
+  Latest News lat1
 ---------------------------------------------------*/
 
 .latestnews-list {
   letter-spacing: .1em;
   margin: 0 auto;
   list-style: none;
-}
-
-.latestnews-list-node {
-  border-bottom: solid 1px #7a8288;
-}
-
-.latestnews-list-node:nth-of-type(1) {
-  border-top: solid 1px #7a8288;
-}
-
-.latestnews-item {
-  display: flex;
-  padding: 40px 0;
-  align-items: center;
-}
-
-.latestnews-item:hover {
-  background-color: #c8d3db;
 }
 
 .latestnews-time {
@@ -1107,7 +1087,8 @@ img {
 
 .latestnews-category {
   margin-left: 128px;
-  letter-spacing: .07em;
+  letter-spacing: .1em;
+  font-size: 87.5%;
 }
 
 .latestnews-info {
@@ -1118,7 +1099,7 @@ img {
 }
 
 /*---------------------------------------------------
-  各種Link　写真、見出し SEC6
+  各種Link lin1
 ---------------------------------------------------*/
 
 .link-list {
@@ -1143,7 +1124,7 @@ img {
   position: relative;
 }
 
-/* 画像を暗くするオーバーレイ */
+/*---------------- 画像を暗くするオーバーレイ ----------------*/
 
 .link-item::before {
   content: '';
@@ -1156,79 +1137,6 @@ img {
   width: 100%;
   height: 100%;
   display: block;
-}
-
-.link-catchcopy {
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 100%;
-  text-align: center;
-  z-index: 1;
-  color: #fff;
-}
-
-.link-name {
-  font-weight: 300;
-  font-size: 2.827rem;
-  margin-bottom: 48px;
-  line-height: 1.4;
-  letter-spacing: .05em;
-}
-
-.link-name span {
-  display: block;
-  font-size: 0.707rem;
-  letter-spacing: .1em;
-  font-feature-settings: "palt";
-  color: #fff;
-}
-
-.link-btn {
-  font-size: 0.707rem;
-  letter-spacing: .1em;
-  margin: 0 auto;
-  padding: 16px;
-  width: 40%;
-  color: #fff;
-  border: 1px solid #fff;
-  display: block;
-  position: relative;
-  pointer-events: auto;
-}
-
-.link-btn::after {
-  position: absolute;
-  content: '';
-  top: 1rem;
-  right: 15px;
-  width: 5px;
-  height: 5px;
-  border-top: 1px solid #fff;
-  border-right: 1px solid #fff;
-  transform: rotate(45deg);
-}
-
-.link-btn:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-  transition: .3s;
-}
-
-/*---------------------------------------------------
-  Members SEC7
----------------------------------------------------*/
-
-.members {
-  display: none;
-}
-
-.members .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: #fff;
 }
 
 /*---------------------------------------------------
@@ -1334,11 +1242,11 @@ img {
     display: none;
   }
 
-  /*-------------------------
-    ハンバーガーメニュー
-  -------------------------*/
+  /*---------------------------------------------------
+    ハンバーガーメニュー ham2
+  ---------------------------------------------------*/
 
-  /* ナビゲーションのためのCSS */
+  /*---------------- ナビ ----------------*/
 
   #g-nav {
     /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
@@ -1373,7 +1281,7 @@ img {
   }
 
   /*ナビゲーション*/
-  #g-nav ul {
+  #g-nav .g-nav-container {
     /*ナビゲーション天地中央揃え*/
     position: absolute;
     z-index: 999;
@@ -1382,42 +1290,54 @@ img {
   }
 
   /*リストのlayout設定*/
-  #g-nav li {
+  #g-nav .g-nav-item {
     list-style: none;
     text-align: left;
   }
 
-  #g-nav li a {
+  #g-nav .g-nav-item a {
     color: #222;
     text-decoration: none;
-    padding: 18px 0;
     display: block;
     letter-spacing: 0.09em;
     font-weight: 300;
-    font-size: 1.999rem;
+    font-size: 1.414rem;
     line-height: 1.2;
   }
 
-  /*ナビゲーション SNS*/
+  #g-nav .g-nav-item a {
+    margin-bottom: 32px;
+  }
+
+  /*---------------- SNS ----------------*/
+
+  #g-nav p {
+    font-size: 0.707rem;
+    letter-spacing: .1em;
+    margin-top: 64px;
+  }
+
   #g-nav .sns-list {
-    /*ナビゲーション天地中央揃え*/
-    position: absolute;
-    z-index: 999;
-    top: 60%;
-    left: 48px;
-    margin-bottom: 0;
-    line-height: 1.2;
+    justify-content: left;
+    margin-top: 8px;
+    padding: 0;
+  }
+
+  #g-nav .sns-list a {
+    padding: 0;
+  }
+
+
+  #g-nav .sns-item img {
+    width: 30px;
+    filter: none;
   }
 
   #g-nav .sns-item:not(:last-of-type) {
-    margin-right: 40px;
+    margin-right: 24px;
   }
 
-  .header .sns-item img {
-    width: 30px;
-  }
-
-  /* ボタンのためのCSS */
+  /*---------------- ボタンのためのCSS ----------------*/
 
   .openbtn {
     position: fixed;
@@ -1472,9 +1392,9 @@ img {
     width: 30%;
   }
 
-  /*-------------------------
-  レイアウト lay2
-  -------------------------*/
+  /*---------------------------------------------------
+  レイアウト　lay2
+  ---------------------------------------------------*/
 
   .newarrivals,
   .product,
@@ -1490,7 +1410,7 @@ img {
     padding: 96px 0 48px 0;
   }
 
-  /* コンテナ ----------------*/
+  /*---------------- コンテナ ----------------*/
 
   .container {
     margin: 0 auto;
@@ -1500,15 +1420,14 @@ img {
 
   .newarrivals .container,
   .product .container,
-  .latestnews .container,
-  .members .container {
+  .latestnews .container {
     position: relative;
     padding-bottom: 64px;
   }
 
-  /*------------------
-    写真、見出し Pho2
-  ------------------*/
+  /*---------------------------------------------------
+    写真 Pho2
+  ---------------------------------------------------*/
 
   .about,
   .lookbook {
@@ -1523,21 +1442,9 @@ img {
     position: inherit;
   }
 
-  .about-catchcopy, .lookbook-catchcopy {
-    text-align: center;
-    position: inherit;
-    margin-top: 48px;
-    transform: inherit;
-  }
-
-  .lookbook-catchcopy {
-    right: 0;
-  }
-
-
-  /*-------------------------
-    見出し ttl2
-  -------------------------*/
+  /*---------------------------------------------------
+  見出し　ttl2
+  ---------------------------------------------------*/
 
   .title-container {
     margin-bottom: 0px;
@@ -1549,9 +1456,22 @@ img {
     margin-bottom: 48px;
   }
 
-  /*------------------
-    ボタン　botan2
-  ------------------*/
+  /*---------------- 写真見出し ----------------*/
+
+  .about-catchcopy, .lookbook-catchcopy {
+    text-align: center;
+    position: inherit;
+    margin-top: 48px;
+    transform: inherit;
+  }
+
+  .lookbook-catchcopy {
+    right: 0;
+  }
+
+  /*---------------------------------------------------
+  ボタン　but2
+  ---------------------------------------------------*/
 
   /* 線の上を別の線が伸びるボタン */
   .btn-container {
@@ -1559,8 +1479,7 @@ img {
     margin-right: 0;
   }
 
-  .latestnews .btn-container,
-  .members .btn-container {
+  .latestnews .btn-container {
     text-align: center;
   }
 
@@ -1571,20 +1490,9 @@ img {
     margin: 0;
   }
 
-  /*
-  .btntransform {
-    margin: 20px 0 0 0;
-  }
-
-  .members .btntransform,
-  .members .btntransform {
-    margin: 0;
-  }
-  */
-
-  /*-------------------------
+  /*---------------------------------------------------
     ヘッダー hea2
-  -------------------------*/
+  ---------------------------------------------------*/
 
   #g-nav {
     display: inline;
@@ -1606,22 +1514,17 @@ img {
     background: #fff;
   }
 
-  /*-------------------------
-    メインビジュアル
-  -------------------------*/
+  /*---------------------------------------------------
+    メインビジュアル mv2
+  ---------------------------------------------------*/
 
   .scrolldown1 {
     right: 50%;
   }
 
-  /*-------------------------
-    About SEC1-2
-  -------------------------*/
-
-
-  /*------------------
-    New arrivals SEC2-2
-  ------------------*/
+  /*---------------------------------------------------
+    New arrivals new2
+  ---------------------------------------------------*/
 
   .newarrivals-list {
     flex-wrap: wrap;
@@ -1644,9 +1547,9 @@ img {
     margin-bottom: 0;
   }
 
-  /*-------------------------
-    Product SEC3-2
-  -------------------------*/
+  /*---------------------------------------------------
+    Product plo2
+  ---------------------------------------------------*/
 
   .slick-prev {
     left: 0;
@@ -1658,84 +1561,23 @@ img {
     top: 95%;
   }
 
-  /*-------------------------
-    lookbook SEC4-2
-  -------------------------*/
+  /*---------------------------------------------------
+    Latest News lat2
+  ---------------------------------------------------*/
 
-
-
-
-  /*-------------------------
-    Latestnews SEC5-2
-  -------------------------*/
-
-  .latestnews-list-node {
-    padding: 24px 0;
-  }
-
-  .latestnews-item {
-    display: grid;
-    padding: 0;
-  }
-
-  .latestnews-time {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-
-  .latestnews-category {
-    margin-left: 0;
-    margin-bottom: 4px;
-  }
-
+  .latestnews-category,
   .latestnews-info {
-    margin-left: 0;
+    margin-left: 96px;
   }
 
-  /*------------------
-    各種Link　写真、見出し lin2
-  ------------------*/
+  /*---------------------------------------------------
+    各種Link lin2
+  ---------------------------------------------------*/
 
   .link-list {
-    /*height: calc(100vw - 78.367px - 268.156px);*/
     width: 100vw;
     height: 70.704vw;
   }
-
-  /*------------------
-    Members SEC7-2
-  ------------------*/
-
-  /*
-  .members {
-    padding: 256px 0;
-  }
-
-  .members .container {
-    display: block;
-    justify-content: center;
-    text-align: center;
-  }
-
-  .members .title {
-    margin: 0 0 40px 0;
-  }
-
-  .members a {
-    margin: 0;
-  }
-
-  .members .btntransform {
-    margin-bottom: 0;
-  }
-  */
-
-  /*------------------
-    フッター foo2
-  ------------------*/
-
-
-
 
 }
 
@@ -1761,19 +1603,36 @@ img {
     display: block;
   }
 
-  /*------------------
-    ハンバーガー 3
-  ------------------*/
+  /*---------------------------------------------------
+    ハンバーガーメニュー ham3
+  ---------------------------------------------------*/
+
+  /*---------------- ナビ ----------------*/
+
+  #g-nav .g-nav-item a {
+    font-size: 1rem;
+  }
+
+  #g-nav .sns-item img {
+    width: 25px;
+  }
+
+  /*---------------- SNS ----------------*/
+
+  #g-nav p {
+    font-weight: 300;
+  }
+
+  /*---------------- ボタンのためのCSS ----------------*/
 
   .openbtn {
     top: 7px;
     right: 11px;
   }
 
-
-  /*------------------
-    レイアウト lay3
-  ------------------*/
+  /*---------------------------------------------------
+    レイアウト　lay3
+  ---------------------------------------------------*/
 
   .section {
     padding: 64px 0;
@@ -1783,7 +1642,8 @@ img {
     padding: 0;
   }
 
-  /* コンテナ ----------------*/
+  /*---------------- コンテナ ----------------*/
+
   .container {
     max-width: 375px;
     padding: 0 24px;
@@ -1791,19 +1651,33 @@ img {
 
   .newarrivals .container,
   .product .container,
-  .latestnews .container,
-  .members .container {
+  .latestnews .container {
     padding-bottom: 56px;
   }
 
 
-  /*------------------
-    写真、見出し Pho3
-  ------------------*/
+  /*---------------------------------------------------
+    写真 Pho3
+  ---------------------------------------------------*/
 
   .about, .lookbook {
     padding: 80px 0 64px 0;
   }
+
+  /*---------------------------------------------------
+    見出し　ttl3
+  ---------------------------------------------------*/
+
+  .mv-title {
+    font-size: 2.827rem;
+  }
+
+  .title {
+    font-size: 1.999rem;
+    margin-bottom: 40px;
+  }
+
+  /*---------------- 写真見出し ----------------*/
 
   .about-catchcopy, .lookbook-catchcopy {
     margin-top: 40px;
@@ -1819,7 +1693,6 @@ img {
   }
 
   .explanation {
-    font-size: 0.707rem;
     margin-bottom: 32px;
   }
 
@@ -1830,27 +1703,9 @@ img {
     font-size: 1rem;
   }
 
-  /*------------------
-    見出し ttl3
-  ------------------*/
-
-  .mv-title {
-    font-size: 2.827rem;
-  }
-
-  .title {
-    font-size: 1.999rem;
-    margin-bottom: 40px;
-  }
-
-
-  /*------------------
-    ボタン　botan3
-  ------------------*/
-
-  /*------------------
+  /*---------------------------------------------------
     ヘッダー hea3
-  ------------------*/
+  ---------------------------------------------------*/
 
   .header img {
     width: 40px;
@@ -1860,21 +1715,9 @@ img {
     padding: 16px 24px;
   }
 
-  /*------------------
-    メインビジュアル
-  ------------------*/
-
-
-
-  /*------------------
-    About SEC1-3
-  ------------------*/
-
-
-
-  /*------------------
-    New arrivals SEC2-3
-  ------------------*/
+  /*---------------------------------------------------
+    New arrivals new3
+  ---------------------------------------------------*/
 
   .newarrivals-item {
     margin-bottom: 32px;
@@ -1888,33 +1731,50 @@ img {
     margin-bottom: 0px;
   }
 
-  /*------------------
-    Product SEC3-3
-  ------------------*/
+  /*---------------------------------------------------
+    Product plo3
+  ---------------------------------------------------*/
 
   .product-name {
     font-size: 1.414rem;
+    font-weight: 400;
   }
 
   .slick-dots {
     margin-top: 32px;
   }
 
-  /*------------------
-    LOOKBOOK SEC4-3
-  ------------------*/
+  /*---------------------------------------------------
+    Latest News lat3
+  ---------------------------------------------------*/
+
+  .latestnews-time {
+    font-size: 1rem;
+    margin-bottom: 8px;
+    font-weight: 400;
+  }
+
+  .latestnews-category {
+    margin-left: 0;
+    margin-bottom: 4px;
+  }
+
+  .latestnews-info {
+    margin-left: 0;
+  }
+
+  .btn {
+    padding: 16px 0;
+  }
 
 
+  .btn span {
+    display: grid;
+  }
 
-  /*------------------
-    Latest News SEC5-3
-  ------------------*/
-
-
-
-  /*------------------
-    各種Link 写真、見出し lin3
-  ------------------*/
+  /*---------------------------------------------------
+    各種Link lin3
+  ---------------------------------------------------*/
 
   .link-name {
     font-size: 1.999rem;
@@ -1930,15 +1790,9 @@ img {
     height: 70.704vw;
   }
 
-  /*------------------
-    Members SEC7-3
-  ------------------*/
-
-
-
-  /*------------------
+  /*---------------------------------------------------
     フッター foo3
-  ------------------*/
+  ---------------------------------------------------*/
 
   .footer-nav-container {
     display: inline;
@@ -1978,44 +1832,5 @@ img {
   #page-top {
     right: 24px;
   }
-
-
-  /*
-  .footer-logo {
-    margin: 0 auto;
-    margin-bottom: 64px;
-  }
-
-  .footer-list {
-    display: block;
-    text-align: center;
-  }
-
-  .footer-item {
-    padding-bottom: 48px;
-  }
-
-  .footer-item:not(:last-of-type) {
-    margin: 0;
-  }
-
-  .footer-nav-container {
-    display: block;
-    margin-bottom: 0;
-  }
-
-  .sns-list {
-    margin-bottom: 64px;
-  }
-
-  .sns-item:not(:last-of-type) {
-    margin-right: 32px;
-  }
-
-  #page-top {
-    right: 24px;
-    bottom: 24px;
-  }
-  */
 
 }
