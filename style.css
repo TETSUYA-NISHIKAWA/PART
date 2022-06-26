@@ -21,6 +21,7 @@ body {
 
 .txt {
   font-family: "游ゴシック体", "Yu Gothic", YuGothic, "ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", "Meiryo", sans-serif;
+  font-weight: 500;
 }
 
 a {
@@ -103,7 +104,7 @@ img {
 .newarrivals,
 .product,
 .latestnews {
-  height: 85vh;
+  height: 75vh;
 }
 
 .newarrivals,
@@ -1439,7 +1440,7 @@ img {
   .lookbook-photo {
     width: 100vw;
     height: 70.704vw;
-    position: inherit;
+    position: initial;
   }
 
   /*---------------------------------------------------
@@ -1460,9 +1461,9 @@ img {
 
   .about-catchcopy, .lookbook-catchcopy {
     text-align: center;
-    position: inherit;
+    position: initial;
     margin-top: 48px;
-    transform: inherit;
+    transform: initial;
   }
 
   .lookbook-catchcopy {
