@@ -181,6 +181,22 @@ img {
   height: 100%;
 }
 
+.ZoomAbout,
+.ZoomLookbook {
+  position: absolute;
+  width: 55vw;
+  height: 38.9063vw;
+  z-index: 1;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+  overflow: hidden;
+}
+
+.ZoomAbout {
+  right: 0;
+}
+
 .about-photo,
 .lookbook-photo {
   display: flex;
@@ -1437,7 +1453,9 @@ img {
   }
 
   .about-photo,
-  .lookbook-photo {
+  .lookbook-photo,
+  .ZoomAbout,
+  .ZoomLookbook {
     width: 100vw;
     height: 70.704vw;
     position: initial;
