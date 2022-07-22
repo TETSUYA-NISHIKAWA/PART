@@ -76,7 +76,7 @@ img {
 
 .lookbook {
   position: relative;
-  background: linear-gradient(to bottom, #e9edf1 0%, #e9edf1 27%, #bdcad4 27%, #bdcad4 100%);
+  background: linear-gradient(to bottom, #e9edf1 0%, #e9edf1 24%, #bdcad4 24%, #bdcad4 100%);
 }
 
 .latestnews {
@@ -104,7 +104,7 @@ img {
 .newarrivals,
 .product,
 .latestnews {
-  height: 75vh;
+  height: 80vh;
 }
 
 .newarrivals,
@@ -137,7 +137,7 @@ img {
   margin: 0 auto;
   text-align: left;
   max-width: 1200px;
-  padding: 0 48px;
+  padding: 0 96px;
   /*background: khaki;*/
 }
 
@@ -280,7 +280,7 @@ img {
 }
 
 .lookbook-catchcopy {
-  right: 48px;
+  right: 96px;
   color: #222;
 }
 
